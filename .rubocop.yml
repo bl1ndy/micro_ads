@@ -7,3 +7,12 @@ AllCops:
   SuggestExtensions: false
   NewCops: enable
   TargetRubyVersion: 3.2
+  Exclude:
+    - bin/*
+
+# Style
+Style/Documentation:
+  Enabled: false
+
+Style/FetchEnvVar:
+  Enabled: false
