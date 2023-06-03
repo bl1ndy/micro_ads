@@ -1,0 +1,9 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+  - rubocop-sequel
+
+AllCops:
+  SuggestExtensions: false
+  NewCops: enable
+  TargetRubyVersion: 3.2
