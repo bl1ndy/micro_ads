@@ -16,3 +16,14 @@ Style/Documentation:
 
 Style/FetchEnvVar:
   Enabled: false
+
+# RSpec
+RSpec/ExampleLength:
+  Max: 15
+  CountAsOne: ['array']
+
+RSpec/VerifiedDoubles:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Max: 3

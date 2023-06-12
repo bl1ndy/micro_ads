@@ -1,0 +1,10 @@
+ru:
+  model:
+    errors:
+      ad:
+        description:
+          blank: "Необходимо указать Описание"
+        city:
+          blank: "Необходимо указать Город"
+        title:
+          blank: "Необходимо указать Заголовок"
