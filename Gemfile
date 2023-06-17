@@ -3,6 +3,8 @@
 source 'https://rubygems.org'
 
 # WEB
+gem 'faraday', '~> 1.10', '>= 1.10.3'
+gem 'faraday_middleware', '~> 1.2'
 gem 'puma', '~> 6.3'
 gem 'rake', '~> 13.0', '>= 13.0.6'
 gem 'sinatra', '~> 3.0', '>= 3.0.6', require: 'sinatra/base'
