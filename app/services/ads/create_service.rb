@@ -11,6 +11,7 @@ module Ads
     end
 
     option :user_id
+    option :client, default: proc { GeocoderService::Client.new }
 
     attr_reader :ad
 
@@ -30,8 +31,7 @@ module Ads
     private
 
     def coordinates
-      client = GeocoderService::Client.new
-      @coordinates ||= client.geocode(@ad[:city])
+      @coordinates ||= @client.geocode(@ad[:city])
     end
   end
 end
