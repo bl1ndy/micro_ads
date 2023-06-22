@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 RSpec.describe AdRoutes, type: :routes do
+  before do
+    geocoder_client = instance_double(GeocoderService::Client)
+    allow(GeocoderService::Client).to receive(:new).and_return(geocoder_client)
+    allow(geocoder_client).to receive(:geocode).with(any_args).and_return([])
+  end
+
   describe 'GET /v1' do
     let(:user_id) { 101 }
 
