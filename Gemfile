@@ -3,6 +3,7 @@
 source 'https://rubygems.org'
 
 # WEB
+gem 'bunny', '~> 2.22'
 gem 'faraday', '~> 1.10', '>= 1.10.3'
 gem 'faraday_middleware', '~> 1.2'
 gem 'puma', '~> 6.3'

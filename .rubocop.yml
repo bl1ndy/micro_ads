@@ -17,6 +17,12 @@ Style/Documentation:
 Style/FetchEnvVar:
   Enabled: false
 
+Style/ModuleFunction:
+  Enabled: false
+
+Naming/MethodParameterName:
+  MinNameLength: 2
+
 # RSpec
 RSpec/ExampleLength:
   Max: 15
