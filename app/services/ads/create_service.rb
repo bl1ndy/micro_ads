@@ -11,6 +11,7 @@ module Ads
     end
 
     option :user_id
+    option :geocoder_service, default: proc { GeocoderService::Client.new }
 
     attr_reader :ad
 
@@ -20,6 +21,7 @@ module Ads
 
       if @ad.valid?
         @ad.save_changes
+        @geocoder_service.geocode_later(@ad)
       else
         fail!(@ad.errors)
       end

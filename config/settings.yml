@@ -1,3 +1,6 @@
+app:
+  name: ads
+
 db:
   adapter: postgresql
   host: localhost
@@ -6,3 +9,6 @@ db:
 
 pagination:
   page_size: 10
+
+rabbitmq:
+  consumer_pool: 10
