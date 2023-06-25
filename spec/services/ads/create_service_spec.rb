@@ -5,6 +5,12 @@ RSpec.describe Ads::CreateService do
 
   let(:user_id) { 101 }
 
+  before do
+    geocoder_client = instance_double(GeocoderService::Client)
+    allow(GeocoderService::Client).to receive(:new).and_return(geocoder_client)
+    allow(geocoder_client).to receive(:geocode).with(any_args).and_return([])
+  end
+
   context 'with valid parameters' do
     let(:ad_params) do
       {
